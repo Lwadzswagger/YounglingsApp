@@ -1,0 +1,14 @@
+<div class="quest" *ngFor="let question of questions">
+  <span>{{question.name}}</span>
+
+  <mat-radio-group class="example-radio-group">
+    <mat-radio-button class="example-radio-button" *ngFor="let answer of question.q" [value]="season">
+      {{answer}}
+    </mat-radio-button>
+  </mat-radio-group>
+</div>
+<div class="submit">
+  <button mat-raised-button (click)="openSnackBar()">
+    Submit
+  </button>
+</div>
